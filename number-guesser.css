@@ -1,0 +1,144 @@
+body {
+   font-family: 'Open Sans', sans-serif;
+   margin: 0px;
+}
+
+header {
+  background-color: #404041;
+  height: 150px;
+  position: relative;
+
+}
+
+h1 {
+  font-size: 55px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 45px;
+}
+.title1 {
+  color: #ED458B;
+}
+
+.title2 {
+  color: #E6E7E8;
+  font-weight: 300;
+}
+
+.test {
+  position: relative;
+}
+
+.number-guess {
+  display: table;
+  margin: auto;
+  position: relative;
+  top: 45px;
+  width: 500px;
+}
+
+input {
+  border: 2px solid #E6E7E8;
+  color: #E6E7E8;
+  display: block;
+  font-size: 35px;
+  font-weight: 100;
+  height: 50px;
+  padding-left: 10px;
+  text-align: left;
+  width: 500px;
+}
+
+.play-buttons {
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  top: 25px;
+  width: 515px;
+}
+
+.guess-and-clear-button {
+  background-color: #929497;
+  border: none;
+  border-radius: 100px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 100;
+  height: 50px;
+  /*margin: auto;
+  position: relative;*/
+  width: 240px;
+}
+
+#guess {
+  left: -9px;
+  position: relative;
+}
+
+#clear {
+  left: 40px;
+  position: relative;
+}
+
+.guess-and-clear-button:disabled {
+  background-color: #D0D2D3;
+  color: #FFFFFF;
+  font-weight: 300;
+}
+
+.guess-and-clear-button:hover {
+  background-color: #EB008B;
+  color: #FFFFFF;
+  font-weight: 300;
+}
+
+.main-section {
+  font-size: 30px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: 105px;
+  width: 500px;
+}
+
+.intro-to-guess {
+  color: #404041;
+  margin: 0px;
+}
+
+.last-number-guess {
+  color: #EB008B;
+  font-size: 100px;
+  font-weight: 550;
+  margin: 0px;
+}
+
+.guess-comment {
+  margin: 0px;
+}
+
+.reset {
+  background-color: #929497;
+  border: none;
+  border-radius: 100px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 100;
+  height: 40px;
+  position: relative;
+  top: 45px;
+  width: 500px;
+}
+
+.reset:disabled {
+  background-color: #D0D2D3;
+  color: #FFFFFF;
+  font-weight: 300;
+}
+
+.reset:hover {
+  background-color: #EB008B;
+  color: #FFFFFF;
+  font-weight: 300;
+}
