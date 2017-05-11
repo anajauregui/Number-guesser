@@ -16,6 +16,7 @@ var comment = document.querySelector('.guess-comment');
 
 var reset = document.querySelector('.reset');
 
+//Function to generate a random number between 1-100;
 function generateRandomNumber(min, max) {
   var min = Math.ceil(min);
   var max = Math.floor(max);
@@ -23,7 +24,7 @@ function generateRandomNumber(min, max) {
   console.log("Random number is " + randomNum);
 }
 
-//function for guess button to take user input and display number-guess submitted into input box
+//function for guess button to take user input and display number-guess submitted into input box;
 guessButton.addEventListener('click', function(){
   var guessValue = userGuess.value;
   lastGuess.innerText = guessValue;
@@ -31,10 +32,7 @@ guessButton.addEventListener('click', function(){
   evaluateGuessIsNumInRange();
 });
 
-
-
 //Evaluate the user guess, display feedback about guess...Need parseInt() to change "string" into numeric value.
-
 function evaluateGuess() {
   if (parseInt(userGuess.value) > randomNum) {
     comment.innerText = "That is too high";
@@ -45,6 +43,7 @@ function evaluateGuess() {
   }
 }
 
+//Evaluate whether the guess is a number, display error if number is out of range, or NaN.
 function evaluateGuessIsNumInRange() {
   var guess = parseInt(userGuess.value);
   if (isNaN(guess)) {
@@ -52,25 +51,31 @@ function evaluateGuessIsNumInRange() {
     lastGuess.innerText = "1 - 100";
     comment.innerText = "";
   } else if (guess < 1 || guess > 100) {
-    lastGuess.innerText = "Pick a number between 1 & 100";
-    comment.innerText = ""
+    introToGuess.innerText = "Pick a number between";
+    lastGuess.innerText = "1 - 100";
+    comment.innerText = "";
   } else {
     evaluateGuess();
   }
 }
 
-//function for button to clear guess input
+// Function to disable clear button when input is blank:
+function disableClearButton() {
+  if (userGuess.value === ""){
+    clearButton.disabled = true;
+  } else if (userGuess.value !== "") {
+    clearButton.disabled = false;
+  }
+};
+//function for button to clear guess input.
 clearButton.addEventListener('click', function(){
   userGuess.value = "";
-  // document.querySelector('.number-guess').reset();
-  // disableClearButton();
+  disableClearButton();
 });
-
-//Function to disable clear button when input is blank:
-// function disableClearButton() {
-//   if (userGuess.value.length == 0);
-//     clearButton.disabled = true;
-//   };
+//function to reverse clear button disable when input field is in use.
+userGuess.addEventListener('input', function(){
+  disableClearButton();
+})
 
 
 //function for button to reset game
