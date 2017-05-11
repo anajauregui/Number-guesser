@@ -10,24 +10,38 @@
       <h1><span class="title1">Number</span> <span class="title2">Guesser</span></h1>
     </header>
 
-    <div class="test">
+
+    <div class="game">
+      <button class="choose-fate" id="one-to-hundred" type="button">1 - 100</button>
+
+      <button class="choose-fate" id="choose-your-range" type="button">Choose your range</button>
+
       <form class="number-guess" action="index.html" method="get">
-      <input id="user-guess" type="text"  name="guess" placeholder="Enter your guess"/>
+
+        <input class="min-max-inputs" id="user-min-value" type="text" name="min-value" placeholder="Min Value"/>
+        <input class="min-max-inputs" id="user-max-value" type="text" name="max-value" placeholder="Max Value"/>
+        <input id="user-guess" type="text"  name="guess" placeholder="Enter your guess"/>
+
       <div class="play-buttons">
-        <button class="guess-and-clear-button" id="guess" type="button" name="button"/>Guess</button>
-        <button class="guess-and-clear-button" id="clear" type="button" name="button"/>Clear</button>
+        <button class="guess-and-clear-button" id="guess" type="button"/>Guess</button>
+
+        <button class="guess-and-clear-button" id="clear" type="button"/>Clear</button>
       </div>
       </form>
 
     <section class="main-section">
         <p class="intro-to-guess">Pick a number</p>
 
-        <p class="last-number-guess">1 - 100</p>
+        <p class="last-number-guess">?</p>
 
         <p class="guess-comment"></p>
 
+        <button class="continue-play" type="button">Continue Playing</button>
+
         <button class="reset" type="button" name="button">Reset</button>
       </section>
+
+      <p class="instructions"> *Choose Continue Play to increase and decrease your range by 10... or Reset to start again and choose your fate...</p>
   </div>
 
 
