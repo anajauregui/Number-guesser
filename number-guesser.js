@@ -77,6 +77,9 @@ userGuess.addEventListener('input', function(){
   disableClearButton();
 })
 
+function disableResetButton() {
+  
+}
 
 //function for button to reset game
 reset.addEventListener('click', function(){
